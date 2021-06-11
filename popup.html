@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 500px;
+        height: fit-content;
+        display: flex;
+      }
+
+      #add {
+        width: fit-content;
+        height: 200px;
+        padding-right: 25px;
+        margin-right: 25px;
+        border-right: 2px solid black;
+      }
+
+      #search {
+        width: fit-content;
+        height: 200px;
+      }
+
+      .search-label {
+        font-weight: bold;
+      }
+
+      .details {
+        font-weight: normal;
+        font-size: 1.5em;
+      }
+
+      .updated-details {
+        font-weight: normal;
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="add">
+        <form id="add_form">
+          <input
+            class="add_rec_input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+          />
+          <br />
+          <input
+            class="add_rec_input"
+            type="text"
+            name="dob"
+            id="dob"
+            placeholder="dd/mm/yy"
+          />
+          <br />
+          <input
+            class="add_rec_input"
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Email"
+          />
+          <br />
+          <br />
+          <button type="submit">Add</button>
+        </form>
+      </div>
+      <div id="search">
+        <form id="search_form">
+          <input
+            type="text"
+            id="search_term"
+            placeholder="Search by email..."
+          />
+          <button id="search_for_record">Search</button>
+          <br />
+          <br />
+          <span class="search-label"
+            >Name:
+            <span class="details" id="details-name"></span>
+            <input class="updated-details" type="text" id="update-name" />
+          </span>
+          <br />
+          <span class="search-label"
+            >Date of Birth:
+            <span class="details" id="details-dob"></span>
+            <input class="updated-details" type="text" id="update-dob" />
+          </span>
+          <br />
+          <span class="search-label"
+            >Email:
+            <span class="details" id="details-email"></span>
+          </span>
+          <br />
+          <br />
+          <button type="submit" id="edit-record">Edit Record</button>
+          <button id="delete-record">Delete Record</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./popup-script.js"></script>
+  </body>
+</html>
